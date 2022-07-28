@@ -28,7 +28,7 @@ function disableButton(id) {
 function searchMovie(e) {
     e.preventDefault()
     resetValues()
-    fetch(`http://www.omdbapi.com/?apikey=b7b31b26&s=${searchInput.value}&type=movie`)
+    fetch(`https://www.omdbapi.com/?apikey=b7b31b26&s=${searchInput.value}&type=movie`)
         .then(res => res.json())
         .then(data => {
             if (data.Response == 'True') {
@@ -47,7 +47,7 @@ function searchMovie(e) {
         })
 }
 function getMovieById(id) {
-    fetch(`http://www.omdbapi.com/?apikey=b7b31b26&i=${id}`)
+    fetch(`https://www.omdbapi.com/?apikey=b7b31b26&i=${id}`)
         .then(res => res.json())
         .then(data => {
             postId = data.imdbID
